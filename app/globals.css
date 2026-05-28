@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f5f7fb;
+  --foreground: #061a31;
 }
 
 @theme inline {
@@ -12,15 +12,160 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+::selection {
+  background: #d6a653;
+  color: #061a31;
+}
+
+.hero-aerial {
+  min-height: 520px;
+  background:
+    linear-gradient(90deg, rgba(6, 26, 49, 0.98) 0%, rgba(6, 26, 49, 0.82) 38%, rgba(6, 26, 49, 0.42) 64%, rgba(6, 26, 49, 0.58) 100%),
+    radial-gradient(ellipse at 82% 6%, rgba(147, 215, 232, 0.9) 0 17%, rgba(95, 172, 203, 0.48) 18% 31%, transparent 32%),
+    radial-gradient(ellipse at 64% 30%, rgba(248, 246, 223, 0.5) 0 7%, transparent 9%),
+    linear-gradient(135deg, #1f432f 0%, #4f7642 36%, #93a86a 53%, #527e49 72%, #27616f 100%);
+}
+
+.hero-aerial::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.72;
+  background:
+    linear-gradient(120deg, transparent 0 38%, rgba(255, 255, 255, 0.72) 39% 40%, transparent 41% 100%),
+    linear-gradient(28deg, transparent 0 56%, rgba(255, 255, 255, 0.54) 57% 58%, transparent 59% 100%),
+    repeating-linear-gradient(0deg, transparent 0 36px, rgba(255, 255, 255, 0.25) 37px 39px, transparent 40px 76px),
+    repeating-linear-gradient(90deg, transparent 0 58px, rgba(255, 255, 255, 0.25) 59px 61px, transparent 62px 116px);
+  clip-path: polygon(24% 0, 100% 0, 100% 100%, 46% 100%);
+}
+
+.hero-aerial::after {
+  position: absolute;
+  inset: auto -5% -22% auto;
+  width: 58%;
+  height: 92%;
+  content: "";
+  opacity: 0.72;
+  border-radius: 50% 0 0 0;
+  background:
+    radial-gradient(ellipse at 54% 50%, rgba(103, 184, 215, 0.75) 0 35%, rgba(233, 246, 247, 0.48) 36% 42%, transparent 43%),
+    linear-gradient(135deg, rgba(4, 66, 91, 0.4), rgba(135, 205, 224, 0.44));
+}
+
+.crypto-pill[data-index="0"] {
+  background: linear-gradient(135deg, #627eea, #26356f);
+}
+
+.crypto-pill[data-index="1"] {
+  background: linear-gradient(135deg, #2775ca, #7bb6ff);
+}
+
+.crypto-pill[data-index="2"] {
+  background: linear-gradient(135deg, #26a17b, #7bd9bd);
+}
+
+.crypto-pill[data-index="3"] {
+  background: linear-gradient(135deg, #f7931a, #c46a0f);
+}
+
+.crypto-pill[data-index="4"] {
+  background: linear-gradient(135deg, #9945ff, #14f195);
+}
+
+.property-visual {
+  background-color: #375f42;
+}
+
+.property-visual::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.72;
+  background:
+    linear-gradient(130deg, transparent 0 46%, rgba(255, 255, 255, 0.76) 47% 49%, transparent 50%),
+    repeating-linear-gradient(90deg, transparent 0 42px, rgba(255, 255, 255, 0.44) 43px 45px, transparent 46px 86px),
+    repeating-linear-gradient(0deg, transparent 0 30px, rgba(255, 255, 255, 0.32) 31px 33px, transparent 34px 64px);
+}
+
+.property-visual::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(180deg, rgba(6, 26, 49, 0.02), rgba(6, 26, 49, 0.22));
+}
+
+.property-visual-ocean {
+  background:
+    radial-gradient(ellipse at 18% 14%, rgba(232, 246, 248, 0.78) 0 10%, transparent 11%),
+    linear-gradient(120deg, #3e7145 0 55%, #e8ddbc 56% 60%, #5fb6cf 61% 100%);
+}
+
+.property-visual-field {
+  background:
+    radial-gradient(ellipse at 70% 36%, rgba(168, 101, 50, 0.55) 0 8%, transparent 9%),
+    linear-gradient(160deg, #709044 0%, #4f7b3b 34%, #8eb256 55%, #476d3d 100%);
+}
+
+.property-visual-villas {
+  background:
+    linear-gradient(0deg, rgba(22, 74, 93, 0.78) 0 18%, transparent 19%),
+    radial-gradient(ellipse at 72% 55%, rgba(238, 218, 170, 0.75) 0 12%, transparent 13%),
+    linear-gradient(135deg, #324f46 0%, #647a50 39%, #d9c08a 40% 53%, #557a51 54% 100%);
+}
+
+.allocation-donut {
+  background: conic-gradient(#2f80ed 0 40%, #34d399 40% 70%, #8a7cf6 70% 90%, #d6a653 90% 100%);
+}
+
+.site-plan-shell {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(43, 94, 55, 0.86), rgba(141, 174, 111, 0.72)),
+    repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.18) 0 2px, transparent 2px 16px);
+}
+
+.site-plan-shell::before {
+  position: absolute;
+  inset: 8% -8%;
+  content: "";
+  transform: rotate(-17deg);
+  opacity: 0.62;
+  background:
+    linear-gradient(90deg, transparent 0 42%, rgba(255, 255, 255, 0.78) 43% 46%, transparent 47%),
+    linear-gradient(0deg, transparent 0 55%, rgba(255, 255, 255, 0.62) 56% 58%, transparent 59%);
+}
+
+.plot-cell {
+  position: relative;
+  z-index: 1;
+  color: #ffffff;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.46);
+}
+
+.plot-cell.available {
+  background: rgba(122, 185, 91, 0.9);
+}
+
+.plot-cell.reserved {
+  background: rgba(214, 166, 83, 0.92);
+}
+
+.plot-cell.sold {
+  background: rgba(100, 116, 139, 0.88);
+}
+
+.plot-cell.park {
+  background: rgba(46, 95, 62, 0.9);
+  color: #f7e5bc;
 }
